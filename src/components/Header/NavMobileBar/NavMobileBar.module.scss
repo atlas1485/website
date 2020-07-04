@@ -1,0 +1,16 @@
+.main{
+  display: flex;
+  justify-content: space-between;
+  max-width: 91%;
+  align-items: center;
+  margin: auto;
+  @media screen and (min-width: 1024px){
+    display: none;
+  }
+  height: 76px;
+}
+.Logo{
+  height: 50px;
+  z-index: 10;
+  width: auto;
+}

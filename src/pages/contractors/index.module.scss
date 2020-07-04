@@ -1,0 +1,151 @@
+.Section1{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 115px 0px;
+}
+.background{
+  box-sizing: border-box;
+  &::before{
+    position: absolute;
+    content: '';
+    pointer-events: none;
+    left: -1%;
+    width: 104%;
+    height: 41%;
+    background-color: #F4EDE2;
+    transform: rotate(-1deg);
+    z-index: -2;
+    margin-top: 131px;
+  }
+}
+.hero{
+  width: 100%;
+  box-sizing: border-box;
+}
+.button{
+  margin: 17px 0 0 0;
+  text-align: center;
+}
+.imageArea{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 280px;
+  box-sizing: border-box;
+  margin: 0px;
+}
+.square{
+  position: absolute;
+  width: 160px;
+  top: -30px;
+  right: 1%;
+  transform: translateY(7%);
+}
+.photo{
+  position: absolute;
+  width: 246px;
+  top: 85px;
+  right: 6%;
+  z-index: 5;
+  transform: translateX(-7%);
+}
+@media screen and (max-width:550px){
+  .photo{
+    opacity: 1;
+    transition-property: none;
+    transform: translateX(0%);
+  }
+}
+@media (min-width: 475px){
+  .Section1{
+    width: 75%;
+  }
+  .square{
+    width: 192px;
+    top: -20px;
+    right: 9%;
+  }
+  .photo{
+    width: 295px;
+    top: 81px;
+    right: 13%;
+  }
+}
+@media (min-width:650px){
+  .Section1{
+    width: 90%;
+  }
+  .square{
+    width: 192px;
+    top: -20px;
+    right: 16%;
+  }
+  .photo{
+    width: 295px;
+    top: 81px;
+    right: 22%;
+  }
+}
+@media (min-width: 850px){
+  .imageArea{
+    height: 396px;
+  }
+  .square{
+    width: 259px;
+    top: 32px;
+    right: 16%;
+  }
+  .photo{
+    width: 397px;
+    top: 95px;
+    right: 21%;
+  }
+}
+@media (min-width: 1100px){
+  .Section1{
+    justify-content: space-between;
+  }
+  .hero{
+    width: 46%;
+    padding-top:30px;
+  }
+  .imageArea{
+    width: 25%;
+    height: 287px;
+    margin: 0px;
+  }
+  .square{
+    width: 259px;
+    top: 1%;
+    right: -22%;
+  }
+  .photo{
+    width: 397px;
+    top: 23%;
+    right: -8%;
+  }
+}
+@media (min-width: 1290px){
+  .hero{
+    width: 46%;
+    padding-top: 30px;
+  }
+  .imageArea{
+    width: 49%;
+    height: 365px;
+  }
+  .square{
+    width: 299px;
+    top: 6px;
+    right: -5%;
+  }
+  .photo{
+    width: 458px;
+    top: 49px;
+    right: 2%;
+  }
+}

@@ -1,0 +1,39 @@
+.container{
+  position: absolute;
+  background-color: #003E78;
+  width: 100vw;
+  left: 0;
+  height: 85vh;
+  z-index: -5;
+}
+.messageCard{
+  background-color: white;
+  height:131px;
+  width:89%;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 21vh;
+}
+.header{
+  padding: 15px 0 0 9px; 
+}
+.message{
+  padding: 12px 13px 0 9px; 
+}
+@media (max-height: 450px){
+  .messageCard{
+    margin-top: 3vh;
+  }
+}
+@media (min-width: 480px){
+  .messageCard{
+    height:150px;
+    width:414px;
+  }
+  .header{
+    padding: 18px 0 0 13px; 
+  }
+  .message{
+    padding: 15px 13px 0 13px; 
+  }
+}

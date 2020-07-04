@@ -1,0 +1,67 @@
+.containerContactInfoArea{
+  display: flex;
+  justify-content: center;
+  margin: 5px auto;
+  flex-direction: column;
+  align-items: center;  
+  @media screen and (min-width:800px){
+    flex-direction: row;
+  }
+}
+.contact100FormTitle {
+  width: 100%;
+  display: block;
+  font-family: Poppins-Regular;
+  font-size: 30px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 15px;
+  margin: 0 auto 0 auto;
+  @media screen and (min-width:625px){
+    width: 550px;
+  }
+  @media screen and (min-width:800px){
+    width: 90%;
+  }
+}
+/*//////////////////////////////////////////////////////////////////
+[ Contact ]*/
+.containerContact100 {
+  width: 350px;
+  width: 100%;
+  background: none;
+  overflow: hidden;
+  margin: auto;
+  @media screen and (min-width:540px){
+    width: 460px;
+  }
+  @media screen and (min-width:625px){
+    width: 460px;
+  }
+  @media screen and (min-width:800px){
+    width: 560px;
+  }
+}
+.map{
+  width: 100vw;
+  margin-left: -1.875rem;
+  @media screen and (min-width:1400px){
+    margin-left: calc((-100vw + 1334px)/2)
+  }
+  margin-bottom: -6px;
+}
+.background{
+  &::before{
+    position: absolute;
+    content: '';
+    pointer-events: none;
+    left: -1%;
+    width: 104%;
+    height: 40%;
+    background-color: #F4EDE2;
+    transform: rotate(-1deg);
+    z-index: -2;
+    margin-top: 44px;
+  }
+}

@@ -1,0 +1,150 @@
+.Section1{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 115px 0px;
+}
+.background{
+  box-sizing: border-box;
+  &::before{
+    position: absolute;
+    content: '';
+    pointer-events: none;
+    left: -2%;
+    width: 103%;
+    height: 37%;
+    background-color: #E2EBF4;
+    transform: rotate(1deg);
+    z-index: -2;
+    margin-top: 170px;
+  }
+}
+.subsection1{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.hero{
+  width: 100%;
+  box-sizing: border-box;
+}
+.hero1{
+  width: 100%;
+  padding-top: 20px;
+}
+.button{
+  margin: 17px 0 0 0;
+  text-align: center;
+}
+.imageArea{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 280px;
+  box-sizing: border-box;
+  margin: 0px;
+}
+.square{
+  position: absolute;
+  width: 156px;
+  top: -37px;
+  left: 29%;
+  transform: translateY(7%);
+}
+.photo{
+  position: absolute;
+  width: 200px;
+  top: 87px;
+  left: 23%;
+  z-index: 5;
+  transform: translateX(-7%);
+}
+@media screen and (max-width:550px){
+  .photo{
+    opacity: 1;
+    transition-property: none;
+    transform: translateX(0%);
+  }
+}
+@media (min-width: 600px){
+  .Section1{
+    width: 75%;
+  }
+  .square{
+    width: 192px;
+    top: -46px;
+    left: 33%;
+  }
+  .photo{
+    width: 250px;
+    top: 62px;
+    left: 27%;
+  }
+}
+@media (min-width: 850px){
+  .imageArea{
+    height: 396px;
+  }
+  .square{
+    width: 256px;
+    top: 10px;
+    left: 38%;
+  }
+  .photo{
+    width: 350px;
+    top: 83px;
+    left: 30%;
+  }
+}
+@media (min-width: 1100px){
+  .hero{
+    width: 38%;
+  }
+  .hero1{
+    width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 35px;
+  }
+  .imageArea{
+    width: 59%;
+    height: 362px;
+    margin: 0px;
+  }
+  .square{
+    width: 299px;
+    top: -32px;
+    left: 227px;
+  }
+  .photo{
+    width: 400px;
+    top: 12px;
+    left: 164px;
+  }
+}
+@media (min-width: 1400px){
+  .hero{
+    width: 38%;
+  }
+  .hero1{
+    width: 74%;
+  }
+  .imageArea{
+    width: 59%;
+    height: 362px;
+  }
+  .square{
+    width: 299px;
+    top: -32px;
+    left: 227px;
+  }
+  .photo{
+    width: 420px;
+  }
+}

@@ -1,0 +1,19 @@
+/* .Image{
+  opacity: 0;
+  animation: fade-in .75s ease forwards,scale-75-1 .75s cubic-bezier(.23,1,.32,1);
+  transition-duration: 5000ms;
+  transition-property: opacity;
+}
+.revealed{
+  opacity: 1;
+}  */
+.Image{
+  max-height: 450px;
+  width: auto;
+}
+.revealed{
+}
+
+.imageContainer{
+  transform:translateY(5%)
+}

@@ -1,0 +1,16 @@
+.Image{
+}
+.revealed{
+}
+
+.imageContainer{
+  transform: translateY(5%);
+  position: relative;
+  cursor: pointer;
+}
+.galleryIcon{
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  width: 30px;
+}
