@@ -48,7 +48,7 @@ const customCarouselStyles = {
     width: 'auto',
     overflow: 'hidden',
     '@media (min-width:600px)': {
-      height: "65vh",
+      height: "75vh",
     }
   }),
 }

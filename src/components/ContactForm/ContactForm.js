@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { navigate } from 'gatsby-link'
 import api from '../../api'
+import Recaptcha from 'react-recaptcha'
 
 import * as Button from '../buttons/Button'
 import contactFormStyles from "./ContactForm.module.scss"
@@ -17,6 +18,7 @@ function encode(data) {
 
 export default (props) => {
   const [state, setState] = React.useState({})
+  const [verified, setVerified] = useState(false)
 
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value })
@@ -26,16 +28,38 @@ export default (props) => {
     setState({ ...state, [e.target.name]: e.target.files[0] })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    const form = e.target
+    
+    if (verified) {
+      alert('You have successfully subscribed!');
+    } else {
+      alert('Please verify that you are a human!');
+    }
+
+   /*  const form = e.target
     const body = encode({
         'form-name': form.getAttribute('name'),
         ...state,
       });
 
     api.forwardEmail(body)
-    navigate(form.getAttribute('action'))
+    navigate(form.getAttribute('action')) */
+  }
+
+  const recaptchaLoaded = () => {
+    console.log('capcha successfully loaded');
+  }
+
+  const verifyCallback = (response) => {
+    if (response) {
+      console.log('verify response:', response)
+      setVerified(true)
+    }
+  }
+  
+  const expiredCallback = (response) => {
+    setVerified(false)
   }
 
   return (
@@ -122,6 +146,15 @@ export default (props) => {
           <Button.SubmitForm
             type='submit'
             label={"Send"}
+          />
+        </div>
+        <div>
+          <Recaptcha
+            sitekey="6Lc-Oq0ZAAAAANUIw-qChGwCWIQ7pdOyI4VgSQPP"
+            render="explicit"
+            onloadCallback={recaptchaLoaded}
+            verifyCallback={verifyCallback}
+            expiredCallback={expiredCallback}
           />
         </div>
       </form>

@@ -16,6 +16,15 @@ module.exports = {
     'gatsby-plugin-sass',
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-recaptcha`,
+      options: {
+        async: true,
+        defer: true,
+        args: `?onload=onloadCallback&render=explicit`,
+      },
+    }
+    ,
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
