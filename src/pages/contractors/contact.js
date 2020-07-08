@@ -42,7 +42,7 @@ const ContractorsContactPage = () => {
             thanksPageURL="/contractors/thanks"
           />
         </div>
-        {/* <div className={contactPageStyles.map}> 
+        <div className={contactPageStyles.map}> 
           <iframe 
             width="100%" 
             height="450" 
@@ -55,7 +55,7 @@ const ContractorsContactPage = () => {
             tabindex="0"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13399.69483520212!2d-80.6670485!3d32.9001853!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa353ff1364dc993f!2sPacific%20Contractors!5e0!3m2!1sen!2sus!4v1591125192352!5m2!1sen!2sus" >
           </iframe>
-        </div> */}
+        </div>
       </div>
     </Layout>
   )
