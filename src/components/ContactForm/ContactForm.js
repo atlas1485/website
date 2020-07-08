@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { navigate } from 'gatsby-link'
 import api from '../../api'
 import Recaptcha from 'react-recaptcha'
@@ -17,34 +17,33 @@ function encode(data) {
 }
 
 export default (props) => {
-  const [state, setState] = React.useState({})
-  const [verified, setVerified] = useState(false)
+  const [values, setValues] = React.useState({})
+  const [token, setToken] = React.useState("")
 
   const handleChange = (e) => {
-    setState({ ...state, [e.target.name]: e.target.value })
+    setValues({ ...values, [e.target.name]: e.target.value })
   }
 
   const handleAttachment = (e) => {
-    setState({ ...state, [e.target.name]: e.target.files[0] })
+    setValues({ ...values, [e.target.name]: e.target.files[0] })
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    
-    if (verified) {
-      alert('You have successfully subscribed!');
-    } else {
-      alert('Please verify that you are a human!');
+
+    if(token===""||token===undefined){
+      return
     }
 
-   /*  const form = e.target
+    const form = e.target
     const body = encode({
-        'form-name': form.getAttribute('name'),
-        ...state,
+        formname: form.getAttribute('name'),
+        ...values,
+        token
       });
 
     api.forwardEmail(body)
-    navigate(form.getAttribute('action')) */
+    navigate(form.getAttribute('action'))
   }
 
   const recaptchaLoaded = () => {
@@ -52,14 +51,11 @@ export default (props) => {
   }
 
   const verifyCallback = (response) => {
-    if (response) {
-      console.log('verify response:', response)
-      setVerified(true)
-    }
+    setToken(response)
   }
   
-  const expiredCallback = (response) => {
-    setVerified(false)
+  const expiredCallback = () => {
+    setToken("")
   }
 
   return (
@@ -133,7 +129,7 @@ export default (props) => {
             id="file" 
             className={contactFormStyles.inputFile} 
             type="file" 
-            name="attachment" 
+            name="file" 
             placeholder="Upload a file"
             onChange={handleAttachment}
           >
@@ -148,9 +144,9 @@ export default (props) => {
             label={"Send"}
           />
         </div>
-        <div>
+        <div className={contactFormStyles.recaptcha}>
           <Recaptcha
-            sitekey="6Lc-Oq0ZAAAAANUIw-qChGwCWIQ7pdOyI4VgSQPP"
+            sitekey="6Lek_K0ZAAAAAJMQD3wotda1Hg4sMy-a9ORTJbp-"
             render="explicit"
             onloadCallback={recaptchaLoaded}
             verifyCallback={verifyCallback}

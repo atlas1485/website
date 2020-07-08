@@ -45,7 +45,7 @@ export default ContractorsPortfolioPage
 
 export const query = graphql`
   query{
-    images: allContentfulPorfolioImages(
+    images: allContentfulContractorsPortfolio(
         sort: {
           fields: projectTitle
           order: DESC
