@@ -14,7 +14,7 @@ const TYPES = {
 const BaseButton = ({ type, label, onClick, buttonType}) => (
   <input
     type={type}
-    defaultValue={label}
+    value={label}
     onClick={onClick}
     className={`
       ${buttonStyles.myButton} 

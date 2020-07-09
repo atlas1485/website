@@ -32,6 +32,7 @@ export default (props) => {
     e.preventDefault()
 
     if(token===""||token===undefined){
+      alert("Please complete reCAPTCHA verification.");
       return
     }
 
@@ -141,7 +142,7 @@ export default (props) => {
         <div className={contactFormStyles.containerFormBtn}>
           <Button.SubmitForm
             type='submit'
-            label={"Send"}
+            label="Send"
           />
         </div>
         <div className={contactFormStyles.recaptcha}>
