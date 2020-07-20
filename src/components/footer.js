@@ -20,7 +20,7 @@ const Footer = () => {
             <label htmlFor="address-input" className={footerStyles.label}>Address</label>
           </div>
           <p className={footerStyles.Links}>
-            <a id="address-input" className={footerStyles.Link} href="https://reactjs.org">
+            <a id="address-input" className={footerStyles.Link} href="https://www.google.com/maps/place/231+S+Jefferies+Blvd,+Walterboro,+SC+29488">
               231 S Jefferies Blvd
               <br/>
               Walterboro, SC 29488
@@ -32,20 +32,20 @@ const Footer = () => {
             <label htmlFor="contact-input" className={footerStyles.label}>Contact</label>
           </div>
           <p id="contact-input" className={footerStyles.Links}>
-            <a className={footerStyles.Link} href="https://reactjs.org">
+            <a className={footerStyles.Link} href={/\/contractors/.test(location.pathname)? 'mailto:contractorsllc.pacific@gmail.com':'mailto:pacific.concrete.division@gmail.com'}>
               {/\/contractors/.test(location.pathname)? 'contractorsllc.pacific@gmail.com':'pacific.concrete.division@gmail.com'}
             </a>
             <br/>
-            <a className={footerStyles.Link} href="https://reactjs.org">843-782-3388</a>
+            <a className={footerStyles.Link} href="tel:843 782 3388">843-782-3388</a>
           </p>
         </div>
         <div className={footerStyles.column}>
           <div className={footerStyles.Social}>
             <div className={footerStyles.SocialLinks}>
-              <a className={footerStyles.Link} href="https://www.facebook.com/">
+              <a className={footerStyles.Link} href="https://www.facebook.com/Pacific-Contractors-LLC-647354152054406/">
                 <LogoFacebook/>
               </a>
-              <a className={footerStyles.Link} href="https://www.linkedin.com/">
+              <a className={footerStyles.Link} href="https://www.linkedin.com/in/pacific-contractors-llc-853503b3/">
                 <LogoLinkedin/>
               </a>
             </div>
