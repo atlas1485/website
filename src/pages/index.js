@@ -1,9 +1,7 @@
 import React from 'react'
-import Layout from '../components/layout'
+import { navigate } from 'gatsby-link'
 
  export default () => {
-  return (
-   <Layout>
-   </Layout>
-  )
+  navigate('/contractors')
+  return null
 }

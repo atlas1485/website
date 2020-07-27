@@ -32,7 +32,7 @@ const Footer = () => {
             <label htmlFor="contact-input" className={footerStyles.label}>Contact</label>
           </div>
           <p id="contact-input" className={footerStyles.Links}>
-            <a className={footerStyles.Link} href={/\/contractors/.test(location.pathname)? 'mailto:contractorsllc.pacific@gmail.com':'mailto:pacific.concrete.division@gmail.com'}>
+            <a className={footerStyles.Link} href={/\/contractors/.test(location.pathname)? 'mailto:contractorsllc.pacific@gmail.com':'mailto:pacific.concrete.division@gmail.com'} target="_blank" rel="noopener">
               {/\/contractors/.test(location.pathname)? 'contractorsllc.pacific@gmail.com':'pacific.concrete.division@gmail.com'}
             </a>
             <br/>
