@@ -1,7 +1,9 @@
-import React from 'react'
+import { useEffect } from 'react'
 import { navigate } from 'gatsby-link'
 
  export default () => {
-  navigate('/contractors')
-  return null
+  useEffect(() => {
+    navigate('/your-redirect/');
+  }, []);
+  return null;
 }
