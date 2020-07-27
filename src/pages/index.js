@@ -3,7 +3,7 @@ import { navigate } from 'gatsby-link'
 
  export default () => {
   useEffect(() => {
-    navigate('/your-redirect/');
+    navigate('/contractors');
   }, []);
   return null;
 }
