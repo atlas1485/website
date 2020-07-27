@@ -4,7 +4,8 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 115px 0px;
+  //padding: 115px 0px;
+  padding: 80px 0px;
 }
 .background{
   box-sizing: border-box;
@@ -13,12 +14,12 @@
     content: '';
     pointer-events: none;
     left: -2%;
-    width: 103%;
-    height: 37%;
+    width: 105%;
+    height: 45%;
     background-color: #E2EBF4;
-    transform: rotate(1deg);
+    transform: rotate(-2deg);
     z-index: -2;
-    margin-top: 170px;
+    margin-top: 125px;
   }
 }
 .subsection1{
@@ -27,7 +28,6 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-
 }
 .hero{
   width: 100%;
@@ -54,14 +54,14 @@
   position: absolute;
   width: 156px;
   top: -37px;
-  left: 29%;
+  left: 27%;
   transform: translateY(7%);
 }
 .photo{
   position: absolute;
   width: 200px;
   top: 87px;
-  left: 23%;
+  left: 20%;
   z-index: 5;
   transform: translateX(-7%);
 }
@@ -104,47 +104,52 @@
 }
 @media (min-width: 1100px){
   .hero{
-    width: 38%;
+    width: 44%;
+    padding-top: 51px;
   }
   .hero1{
     width: 86%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 35px;
+    padding-top: 66px;
   }
   .imageArea{
-    width: 59%;
+    width: 35%;
     height: 362px;
     margin: 0px;
   }
   .square{
-    width: 299px;
-    top: -32px;
-    left: 227px;
+    width: 256px;
+    top: -4px;
+    left: 195px;
   }
   .photo{
-    width: 400px;
-    top: 12px;
-    left: 164px;
+    width: 342px;
+    top: 74px;
+    left: 150px;
   }
 }
 @media (min-width: 1400px){
   .hero{
-    width: 38%;
+    width: 45%;
+    padding-top: 66px;
   }
   .hero1{
     width: 74%;
   }
   .imageArea{
-    width: 59%;
-    height: 362px;
+    width: 47%;
+    height: 375px;
   }
   .square{
     width: 299px;
-    top: -32px;
+    top: -1px;
     left: 227px;
   }
   .photo{
-    width: 420px;
+    width: 400px;
+    top: 58px;
+    left: 172px;
   }
 }
